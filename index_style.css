@@ -1,0 +1,32 @@
+html {
+    background-image: url(./Img/background.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: 0px;
+    height: 100%;
+    width: 100%;
+    font-family: 'Dosis', sans-serif;
+}
+
+.list_item {
+    list-style-type: none;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-height: 95vh;
+}
+
+#reg_box {
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(85, 153, 27, 0.8);
+    width: 25%;
+    height: 60vh;
+    align-items: center;
+    justify-content: center;
+}
+
