@@ -67,6 +67,42 @@ body {
     border-width: 1px;
 }
 
+#username {
+    background-image: url(./Img/user_black.png);
+    background-repeat: no-repeat;
+    background-size: 8% 80%;
+    padding-right: 10px;
+    background-position: 95% 50%;
+}
+
+#username:focus {
+    background-image: none;
+}
+
+#pass {
+    background-image: url(./Img/pass_black.png);
+    background-repeat: no-repeat;
+    background-size: 8% 80%;
+    padding-right: 10px;
+    background-position: 95% 50%;
+}
+
+#pass:focus {
+    background-image: none;
+}
+
+#mail {
+    background-image: url(./Img/mail_black.png);
+    background-repeat: no-repeat;
+    background-size: 8% 80%;
+    padding-right: 10px;
+    background-position: 95% 50%;
+}
+
+#mail:focus {
+    background-image: none;
+}
+
 #checkbox {
     margin-right: 8px;
 }
