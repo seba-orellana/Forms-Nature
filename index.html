@@ -9,23 +9,26 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@300;500&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
     <div id="reg_box">
-        <h1 class="title">Register yourself now!</h1>
-        <form id="form">
-            <div class="list_item">
-                <label class="label" for="name">Username:</label>
+        <h1 class="title" id="main_title">Register yourself now!</h1>
+        <iframe name="nowhere" id="nowhere" style="display: none;"></iframe>
+        <form id="form" target="nowhere">
+            <div id="username_list" class="list_item">
+                <label id="username_label" class="label" for="name">Username:</label>
+                <img id="username_icon" src="./Img/user_black.png" alt="user_icon">
                 <input type="text" id="username" name="user_name"/>
             </div>
-            <div class="list_item">
-                <label class="label" for="name">Password:</label>
+            <div id="pass_list" class="list_item">
+                <label id="pass_label" class="label" for="name">Password:</label>
+                <img id="pass_icon" src="./Img/pass_black.png" alt="pass_icon">
                 <input type="password" id="pass" name="user_pass"/>
             </div>
-            <div class="list_item">
-                <label class="label" for="mail">Email:</label>
+            <div id="mail_list" class="list_item">
+                <label id="mail_label" class="label" for="mail">Email:</label>
+                <img id="mail_icon" src="./Img/mail_black.png" alt="mail_icon">
                 <input type="email" id="mail" name="user_email"/>
             </div>
             <div class="list_item">
@@ -41,5 +44,7 @@
             <a href="#" class="fa fa-linkedin"></a>
         </form>
     </div>
+    <h2 id="created" class="title">Created by seba-orellana</h2>
+    <script src="./index.js"></script>
 </body>
 </html>
