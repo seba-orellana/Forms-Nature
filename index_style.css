@@ -8,6 +8,14 @@ html {
     font-family: 'Dosis', sans-serif;
 }
 
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-height: 95vh;
+}
+
 .list_item {
     display: flex;
     flex-direction: column;
@@ -16,14 +24,6 @@ html {
     margin-bottom: 3%;
     text-align: start;
     font-size: larger;
-}
-
-body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    min-height: 95vh;
 }
 
 #form {
@@ -51,7 +51,7 @@ body {
 
 #created {
     position: absolute;
-    top: 93%;
+    top: 90%;
     left: 85%;
 }
 
@@ -77,6 +77,17 @@ body {
     border-width: 1px;
 }
 
+.anim {
+    transition: 400ms;
+    transform: translate(-1rem, -2.2rem);
+}
+
+.label_icon {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
 #username, #pass, #mail{
     width: 0%;
     visibility: hidden;
@@ -84,26 +95,26 @@ body {
 }
 
 #username_list, #pass_list {
-    margin-bottom: 3rem;
+    margin-bottom: 5%;
 }
 
 #mail_list {
     margin-bottom: 1.5rem;
 }
 
-#username_icon {
+#username_icon, #pass_icon, #mail_icon {
     height: 32px;
     width: 32px;
-    position: absolute;
-    top: 19.4rem;
-    left: 68rem;
+    position: relative;
+    top: 2rem;
+    right: 1rem;
     transition: 200ms;
 }
 
-#username_label {
-    position: absolute;
-    top: 19.6rem;
-    left: 50.1rem;
+#username_label, #pass_label, #mail_label {
+    position: relative;
+    top: 2.2rem;
+    left: 1rem;
     cursor: text;
     transition: 1s;
 }
@@ -115,58 +126,6 @@ body {
 
 #username_list:hover #username_icon, #pass_list:hover #pass_icon, #mail_list:hover #mail_icon {
     opacity: 0%;
-}
-
-#username_list:hover #username_label {
-    top: 17.7rem;
-    left: 49.5rem;
-    transition: 400ms;
-}
-
-#pass_icon {
-    height: 32px;
-    width: 32px;
-    position: absolute;
-    top: 24.5rem;
-    left: 68rem;
-    transition: 200ms;
-}
-
-#pass_label {
-    position: absolute;
-    top: 24.8rem;
-    left: 50.1rem;
-    cursor: text;
-    transition: 1s;
-}
-
-#pass_list:hover #pass_label {
-    top: 22.8rem;
-    left: 49.5rem;
-    transition: 400ms;
-}
-
-#mail_icon {
-    height: 32px;
-    width: 32px;
-    position: absolute;
-    top: 29.7rem;
-    left: 68rem;
-    transition: 200ms;
-}
-
-#mail_label {
-    position: absolute;
-    top: 29.8rem;
-    left: 50.1rem;
-    cursor: text;
-    transition: 1s;
-}
-
-#mail_list:hover #mail_label {
-    top: 27.8rem;
-    left: 49.5rem;
-    transition: 400ms;
 }
 
 #checkbox {
@@ -219,4 +178,40 @@ input {
 input:focus{
     outline: none;
     border: rgb(66, 63, 63) solid 1px;
+}
+
+@media(max-width: 1023px) {
+    html {
+        background-position: fixed;
+    }
+
+    #reg_box {
+        width: 70%;
+    }
+
+    #username_label, #pass_label, #mail_label {
+        top: 0%;
+        left: 0%;
+    }
+
+    #username_icon, #pass_icon, #mail_icon {
+        visibility: hidden;
+    }
+
+    #username, #pass, #mail {
+        visibility: visible;
+        width: 100%;
+    }
+
+    #created {
+        top: 93%;
+        left: 65%
+    }
+}
+
+@media(max-width: 768px) {
+    #created {
+        right: 0%;
+        top: 90%
+    }
 }
